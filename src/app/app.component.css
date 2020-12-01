@@ -1,0 +1,12 @@
+mat-drawer {
+  padding: 1% 2% 2% 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.mat-toolbar {
+  position: sticky;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}

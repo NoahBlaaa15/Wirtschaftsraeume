@@ -1,0 +1,15 @@
+.mat-card{
+  max-width: 500px;
+  min-width: 300px;
+  min-height: 250px;
+  margin: 1% 0 1% 0;
+}
+
+
+.wirtschaft{
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: auto;
+}
