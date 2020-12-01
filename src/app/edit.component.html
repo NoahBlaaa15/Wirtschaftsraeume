@@ -1,1 +1,19 @@
-<p>edit works!</p>
+<h2>{{data.room}}</h2>
+<form class="example-form">
+  <div *ngIf="allgemein$ | async as allgemein">
+    <h4>Allgemein:</h4>
+    <mat-form-field class="example-full-width">
+      <mat-label>Bild</mat-label>
+      <input matInput #aBild value="{{allgemein.bild}}">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Datei</mat-label>
+      <input matInput #aDatei value="{{allgemein.datei}}">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Text</mat-label>
+      <textarea matInput #aText value="{{allgemein.text}}"></textarea>
+    </mat-form-field>
+    <button mat-button (click)="changeValues(aText.value, aBild.value, aDatei.value)">Speichern</button>
+  </div>
+</form>

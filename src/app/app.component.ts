@@ -19,8 +19,10 @@ export class AppComponent {
 
   public TabIndex = 0;
 
-  public openEdit(){
-    this.dialog.open(EditComponent);
+  public openEdit(room){
+    this.dialog.open(EditComponent, {
+      data: {room}
+    });
   }
 
   public openLogin(){

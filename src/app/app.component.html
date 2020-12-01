@@ -21,7 +21,7 @@
     </button>
     <span>Wirtschaftsräume - 11e</span>
     <span class="spacer"></span>
-    <button (click)="openEdit()" mat-button *ngIf="auth.user$ | async as user;">{{ user.name }}</button>
+    <button (click)="openEdit(user.name)" mat-button *ngIf="auth.user$ | async as user;">{{ user.name }}</button>
     <button (click)="openLogin()" mat-icon-button>
       <mat-icon>login</mat-icon>
     </button>

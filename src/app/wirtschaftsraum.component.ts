@@ -5,6 +5,7 @@ import {Observable} from 'rxjs';
 interface RaumObj {
   text: string;
   bild: string;
+  datei: string;
 }
 
 @Component({
@@ -30,5 +31,10 @@ export class WirtschaftsraumComponent implements OnInit {
     this.unternehmen$ = this.r.getUnternehmen(this.raum);
   }
 
+  public openLink(url: string){
+    if (url !== '') {
+      window.open(url, '_blank');
+    }
+  }
 
 }
