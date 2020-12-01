@@ -31,8 +31,4 @@ export class EditComponent implements OnInit {
     this.unternehmen$ = this.r.getUnternehmen(this.data.room);
   }
 
-  public changeValues(text, bild, datei) {
-    this.u.setAllgemein(this.data.room, text, bild, datei);
-  }
-
 }

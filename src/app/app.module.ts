@@ -22,6 +22,8 @@ import { LoginComponent } from './login.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { EditComponent } from './edit.component';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { EditComponent } from './edit.component';
     MatInputModule,
     MatGridListModule,
     MatSidenavModule,
+    MatDividerModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

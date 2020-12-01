@@ -1,19 +1,74 @@
-<h2>{{data.room}}</h2>
-<form class="example-form">
-  <div *ngIf="allgemein$ | async as allgemein">
-    <h4>Allgemein:</h4>
-    <mat-form-field class="example-full-width">
-      <mat-label>Bild</mat-label>
-      <input matInput #aBild value="{{allgemein.bild}}">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <mat-label>Datei</mat-label>
-      <input matInput #aDatei value="{{allgemein.datei}}">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <mat-label>Text</mat-label>
-      <textarea matInput #aText value="{{allgemein.text}}"></textarea>
-    </mat-form-field>
-    <button mat-button (click)="changeValues(aText.value, aBild.value, aDatei.value)">Speichern</button>
-  </div>
-</form>
+<h1 mat-dialog-title>{{data.room}}</h1>
+<mat-dialog-content class="mat-typography">
+  <form class="example-form">
+
+    <div *ngIf="allgemein$ | async as allgemein">
+      <h2>Allgemein:</h2>
+      <mat-form-field class="example-full-width">
+        <mat-label>Bild</mat-label>
+        <input matInput #Bild value="{{allgemein.bild}}">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Datei</mat-label>
+        <input matInput #Datei value="{{allgemein.datei}}">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Text</mat-label>
+        <textarea matInput #Text value="{{allgemein.text}}"></textarea>
+      </mat-form-field>
+      <button mat-button (click)="this.u.setAllgemein(data.room,Text.value, Bild.value, Datei.value)">Speichern</button>
+    </div>
+
+    <div *ngIf="entstehung$ | async as entstehung">
+      <h2>Entstehung:</h2>
+      <mat-form-field class="example-full-width">
+        <mat-label>Bild</mat-label>
+        <input matInput #Bild value="{{entstehung.bild}}">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Datei</mat-label>
+        <input matInput #Datei value="{{entstehung.datei}}">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Text</mat-label>
+        <textarea matInput #Text value="{{entstehung.text}}"></textarea>
+      </mat-form-field>
+      <button mat-button (click)="this.u.setEntstehung(data.room,Text.value, Bild.value, Datei.value)">Speichern</button>
+    </div>
+
+    <div *ngIf="infrastruktur$ | async as infrastruktur">
+      <h2>Infrastruktur:</h2>
+      <mat-form-field class="example-full-width">
+        <mat-label>Bild</mat-label>
+        <input matInput #Bild value="{{infrastruktur.bild}}">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Datei</mat-label>
+        <input matInput #Datei value="{{infrastruktur.datei}}">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Text</mat-label>
+        <textarea matInput #Text value="{{infrastruktur.text}}"></textarea>
+      </mat-form-field>
+      <button mat-button (click)="this.u.setInfrastruktur(data.room,Text.value, Bild.value, Datei.value)">Speichern</button>
+    </div>
+
+    <div *ngIf="unternehmen$ | async as unternehmen">
+      <h2>Unternehmen und Beschäftigung:</h2>
+      <mat-form-field class="example-full-width">
+        <mat-label>Bild</mat-label>
+        <input matInput #Bild value="{{unternehmen.bild}}">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Datei</mat-label>
+        <input matInput #Datei value="{{unternehmen.datei}}">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Text</mat-label>
+        <textarea matInput #Text value="{{unternehmen.text}}"></textarea>
+      </mat-form-field>
+      <button mat-button (click)="this.u.setUnternehmen(data.room,Text.value, Bild.value, Datei.value)">Speichern</button>
+    </div>
+
+  </form>
+</mat-dialog-content>

@@ -13,20 +13,19 @@ export class UpdateService {
 
 
   public setAllgemein(room, text, bild, datei): void{
-    const tutRef = this.afs.collection(`${room}/`).doc('allgemein');
-    tutRef.update({ text, bild, datei });
+    this.afs.collection(`${room}/`).doc('allgemein').update({ text, bild, datei });
   }
 
   public setEntstehung(room, text, bild, datei): void{
-
+    this.afs.collection(`${room}/`).doc('entstehung').update({ text, bild, datei });
   }
 
-  public setInfastruktur(room, text, bild, datei): void{
-
+  public setInfrastruktur(room, text, bild, datei): void{
+    this.afs.collection(`${room}/`).doc('infrastruktur').update({ text, bild, datei });
   }
 
   public setUnternehmen(room, text, bild, datei): void{
-
+    this.afs.collection(`${room}/`).doc('unternehmen').update({ text, bild, datei });
   }
 
 }
