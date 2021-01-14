@@ -6,15 +6,15 @@
       <h2>Allgemein:</h2>
       <mat-form-field class="example-full-width">
         <mat-label>Bild</mat-label>
-        <input matInput #Bild value="{{allgemein.bild}}">
+        <input class="example-input" matInput #Bild value="{{allgemein.bild}}">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Datei</mat-label>
-        <input matInput #Datei value="{{allgemein.datei}}">
+        <input class="example-input" matInput #Datei value="{{allgemein.datei}}">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Text</mat-label>
-        <textarea matInput #Text value="{{allgemein.text}}"></textarea>
+        <textarea class="example-input" matInput #Text value="{{allgemein.text}}"></textarea>
       </mat-form-field>
       <button mat-button (click)="this.u.setAllgemein(data.room,Text.value, Bild.value, Datei.value)">Speichern</button>
     </div>
@@ -23,15 +23,15 @@
       <h2>Entstehung:</h2>
       <mat-form-field class="example-full-width">
         <mat-label>Bild</mat-label>
-        <input matInput #Bild value="{{entstehung.bild}}">
+        <input class="example-input" matInput #Bild value="{{entstehung.bild}}">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Datei</mat-label>
-        <input matInput #Datei value="{{entstehung.datei}}">
+        <input class="example-input" matInput #Datei value="{{entstehung.datei}}">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Text</mat-label>
-        <textarea matInput #Text value="{{entstehung.text}}"></textarea>
+        <textarea class="example-input" matInput #Text value="{{entstehung.text}}"></textarea>
       </mat-form-field>
       <button mat-button (click)="this.u.setEntstehung(data.room,Text.value, Bild.value, Datei.value)">Speichern</button>
     </div>
@@ -40,15 +40,15 @@
       <h2>Infrastruktur:</h2>
       <mat-form-field class="example-full-width">
         <mat-label>Bild</mat-label>
-        <input matInput #Bild value="{{infrastruktur.bild}}">
+        <input class="example-input" matInput #Bild value="{{infrastruktur.bild}}">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Datei</mat-label>
-        <input matInput #Datei value="{{infrastruktur.datei}}">
+        <input class="example-input" matInput #Datei value="{{infrastruktur.datei}}">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Text</mat-label>
-        <textarea matInput #Text value="{{infrastruktur.text}}"></textarea>
+        <textarea class="example-input" matInput #Text value="{{infrastruktur.text}}"></textarea>
       </mat-form-field>
       <button mat-button (click)="this.u.setInfrastruktur(data.room,Text.value, Bild.value, Datei.value)">Speichern</button>
     </div>
@@ -57,15 +57,15 @@
       <h2>Unternehmen und Beschäftigung:</h2>
       <mat-form-field class="example-full-width">
         <mat-label>Bild</mat-label>
-        <input matInput #Bild value="{{unternehmen.bild}}">
+        <input class="example-input" matInput #Bild value="{{unternehmen.bild}}">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Datei</mat-label>
-        <input matInput #Datei value="{{unternehmen.datei}}">
+        <input class="example-input" matInput #Datei value="{{unternehmen.datei}}">
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <mat-label>Text</mat-label>
-        <textarea matInput #Text value="{{unternehmen.text}}"></textarea>
+        <textarea class="example-input" matInput #Text value="{{unternehmen.text}}"></textarea>
       </mat-form-field>
       <button mat-button (click)="this.u.setUnternehmen(data.room,Text.value, Bild.value, Datei.value)">Speichern</button>
     </div>

@@ -3,12 +3,12 @@
   <mat-card *ngIf="allgemein$ | async as allgemein;">
     <mat-card-header>
       <mat-icon mat-card-avatar>map</mat-icon>
-      <mat-card-title>Allgemein</mat-card-title>
+      <mat-card-title (click)="openBig(allgemein$, 'Allgemein')">Allgemein</mat-card-title>
       <mat-card-subtitle>{{raum | titlecase}}</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="{{allgemein.bild}}">
     <mat-card-content>
-      <p>
+      <p style="white-space: pre-line">
           {{allgemein.text}}
       </p>
     </mat-card-content>
@@ -20,12 +20,12 @@
   <mat-card *ngIf="entstehung$ | async as entstehung;">
     <mat-card-header>
       <mat-icon mat-card-avatar>build</mat-icon>
-      <mat-card-title>Entstehung</mat-card-title>
+      <mat-card-title (click)="openBig(entstehung$, 'Entstehung')">Entstehung</mat-card-title>
       <mat-card-subtitle>{{raum | titlecase}}</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="{{entstehung.bild}}">
     <mat-card-content>
-      <p>
+      <p style="white-space: pre-line">
         {{entstehung.text}}
       </p>
     </mat-card-content>
@@ -37,12 +37,12 @@
   <mat-card *ngIf="infrastruktur$ | async as infrastruktur;">
     <mat-card-header >
       <mat-icon mat-card-avatar>commute</mat-icon>
-      <mat-card-title>Infrastruktur</mat-card-title>
+      <mat-card-title (click)="openBig(infrastruktur$, 'Infrastruktur')">Infrastruktur</mat-card-title>
       <mat-card-subtitle>{{raum | titlecase}}</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="{{infrastruktur.bild}}">
     <mat-card-content>
-      <p>
+      <p style="white-space: pre-line">
         {{infrastruktur.text}}
       </p>
     </mat-card-content>
@@ -54,12 +54,12 @@
   <mat-card *ngIf="unternehmen$ | async as unternehmen;">
     <mat-card-header>
       <mat-icon mat-card-avatar>business</mat-icon>
-      <mat-card-title>Unternehmen und Beschäftigung</mat-card-title>
+      <mat-card-title (click)="openBig(unternehmen$, 'Unternehmen und Beschäftigung')">Unternehmen und Beschäftigung</mat-card-title>
       <mat-card-subtitle>{{raum | titlecase}}</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="{{unternehmen.bild}}">
     <mat-card-content>
-      <p>
+      <p style="white-space: pre-line">
         {{unternehmen.text}}
       </p>
     </mat-card-content>

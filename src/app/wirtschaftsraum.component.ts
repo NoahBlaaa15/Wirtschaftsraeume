@@ -1,6 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {RaeumeService} from './raeume.service';
 import {Observable} from 'rxjs';
+import {MatDialog} from "@angular/material/dialog";
+import {EditComponent} from "./edit.component";
+import {ThemaComponent} from "./thema.component";
 
 interface RaumObj {
   text: string;
@@ -22,7 +25,7 @@ export class WirtschaftsraumComponent implements OnInit {
 
   @Input() raum: string;
 
-  constructor(public r: RaeumeService) { }
+  constructor(public r: RaeumeService,  public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.allgemein$ = this.r.getAllgemein(this.raum);
@@ -37,4 +40,9 @@ export class WirtschaftsraumComponent implements OnInit {
     }
   }
 
+  public openBig(thema: Observable<RaumObj>, name: string){
+    this.dialog.open(ThemaComponent, {
+      data: {thema, name}
+    });
+  }
 }

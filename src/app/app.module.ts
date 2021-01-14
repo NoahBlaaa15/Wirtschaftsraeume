@@ -24,13 +24,15 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { EditComponent } from './edit.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import { ThemaComponent } from './thema.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WirtschaftsraumComponent,
     LoginComponent,
-    EditComponent
+    EditComponent,
+    ThemaComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
