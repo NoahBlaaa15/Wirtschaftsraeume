@@ -1,7 +1,7 @@
 <h1 mat-dialog-title><mat-icon mat-card-avatar>pageview</mat-icon> {{data.name}}</h1>
 <mat-dialog-content *ngIf="data.thema | async as thema" class="mat-typography">
   <img src="{{thema.bild}}">
-  <p style="white-space: pre-line">{{thema.text}}</p>
+  <p style="white-space: pre-wrap">{{thema.text}}</p>
   <div mat-dialog-actions>
     <button mat-icon-button (click)="openLink(thema.datei);"><mat-icon>launch</mat-icon></button>
     <button mat-button mat-dialog-close>Close</button>
