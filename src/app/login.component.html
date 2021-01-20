@@ -21,7 +21,7 @@
 
     <mat-dialog-actions align="end">
       <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-button (click)="auth.logIn(this.email, this.password)" [mat-dialog-close]="true">Login</button>
+    <button mat-button (click)="AuthEP(this.email, this.password)" [mat-dialog-close]="true">Login</button>
     </mat-dialog-actions>
 
   </ng-template>

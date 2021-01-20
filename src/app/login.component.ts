@@ -18,4 +18,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public AuthEP(email: string, password: string){
+    if (email !== '' && password !== '') {
+      this.auth.logIn(email, password);
+      window.setTimeout ( () => { window.location.reload(); }, 500);
+    }
+  }
+
 }
